@@ -58,3 +58,18 @@ VALUES ('Michael Brown', 5500.00, '2023-07-05');
 
 INSERT INTO employee_payroll (name, salary, start_date)
 VALUES ('Emily Davis', 4000.00, '2023-07-01');
+
+/*
+Ability to retrieve all the
+employee payroll data that is
+added to payroll service
+database
+- Use payroll_service database in MSSQL
+Client
+- Use SELECT * FROM employee_payroll to
+retrieve all the data from the
+employee_payroll table
+*/
+
+
+SELECT * FROM employee_payroll;
