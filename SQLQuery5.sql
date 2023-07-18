@@ -113,4 +113,35 @@ ADD gender CHAR(1) NULL;
 
 UPDATE employee_payroll
 SET gender = 'M'
-WHERE name IN ('Bill', 'Charlie');
+WHERE name IN ('John Doe', 'John Doe');
+
+
+/*
+Ability to find sum, average, min, max
+and number of male and female
+employees
+- Use payroll_service database in MSSQL Client
+- Use Database Function SUM, AVG, MIN, MAX, COUNT
+to do analysis by Male or Female.
+- Note: You will need to use GROUP BY GENDER grouping to
+get the result
+- E.g. SELECT SUM(salary) FROM employee_payroll
+WHERE gender = 'F' GROUP BY gender;
+*/
+
+SELECT AVG(salary) AS avg_salary
+FROM employee_payroll
+WHERE gender = 'M'
+GROUP BY gender;
+
+SELECT MIN(salary) AS min_salary
+FROM employee_payroll
+WHERE gender = 'F'
+GROUP BY gender;
+
+SELECT gender, COUNT(*) AS count_employees
+FROM employee_payroll
+GROUP BY gender;
+
+select * from employee_payroll
+
