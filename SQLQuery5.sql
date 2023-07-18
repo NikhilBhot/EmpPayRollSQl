@@ -34,5 +34,27 @@ CREATE TABLE employee_payroll (
   salary DECIMAL(10, 2),
   start_date DATE
 );
+/*
+Ability to create employee
+payroll data in the payroll
+service database as part of
+CRUD Operation - Use payroll_service database in
+MSSQL Client
+- Use INSERT INTO employee_payroll
+Query to create employees payroll
+data into the employee_payroll table
+*/
+INSERT INTO employee_payroll (name, salary, start_date)
+VALUES ('John Doe', 5000.00, '2023-07-01');
 
+INSERT INTO employee_payroll (name, salary, start_date)
+VALUES ('Jane Smith', 6000.00, '2023-06-15');
 
+INSERT INTO employee_payroll (name, salary, start_date)
+VALUES ('Alice Johnson', 4500.00, '2023-07-10');
+
+INSERT INTO employee_payroll (name, salary, start_date)
+VALUES ('Michael Brown', 5500.00, '2023-07-05');
+
+INSERT INTO employee_payroll (name, salary, start_date)
+VALUES ('Emily Davis', 4000.00, '2023-07-01');
