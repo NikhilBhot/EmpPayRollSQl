@@ -93,3 +93,24 @@ Query
 
 SELECT * FROM employee_payroll
 WHERE start_date BETWEEN CAST('2018-01-01' AS DATE) AND GETDATE();
+
+/*
+Ability to add Gender to Employee
+Payroll Table and Update the Rows to
+reflect the correct Employee Gender
+- Use payroll_service database in MSSQL Client
+- Use Alter Table Command to add Field gender after
+the name field
+- Use Update Query to set the gender using where
+condition with the employee name
+- E.g. UPDATE employee_payroll set gender =
+'M' where name = 'Bill' or name =
+'Charlie';
+*/
+ALTER TABLE employee_payroll
+ADD gender CHAR(1) NULL;
+
+
+UPDATE employee_payroll
+SET gender = 'M'
+WHERE name IN ('Bill', 'Charlie');
